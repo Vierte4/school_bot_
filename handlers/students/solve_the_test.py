@@ -2,6 +2,7 @@ from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.types import CallbackQuery
 
+
 from data import *
 from data.users_data import students
 from keyboards.inline import *
@@ -93,7 +94,7 @@ async def download_files(call: types.CallbackQuery, state: FSMContext, callback_
         discipline = current_user_paths[f'{call.from_user.id}descipline']
         await state.finish()
         rate_for_test = round(
-            (sum(current_user_paths[f'{call.from_user.id}answers']) / len(current_user_paths[call.from_user.id])) * 5,
+            (sum(current_user_paths[f'{call.from_user.id}answers']) / len(current_user_paths[call.from_user.id])) * max_rate,
             2)
         await call.message.answer(text=f'Ваша оценка: {rate_for_test}')
 
