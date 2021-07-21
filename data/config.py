@@ -22,7 +22,5 @@ submit_tasks_data = {}
 discipline_rate_path = r'C:\Programming\Фриланс. Заказы\aiogram-bot-template\Файлы\Баллы по предметам'
 add_users_path = r'C:\Programming\Фриланс. Заказы\aiogram-bot-template\Файлы\Добавленные пользователи'
 
-
-BOT_TOKEN = env.str('BOT_TOKEN')  # Забираем значение типа str
-ADMINS = env.list('ADMINS')  # Тут у нас будет список из админов
-'''IP = env.str("ip")  # Тоже str, но для айпи адреса хоста'''
+ADMINS='319503958'
+BOT_TOKEN='1870517443:AAFzS9-xdIfx-uuK6zgzCeRjDN1EFjfzdM8'

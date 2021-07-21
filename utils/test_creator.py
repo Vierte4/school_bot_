@@ -1,5 +1,3 @@
-import docx
-
 def test_creator(directory):
     # Вовзращает список списков, построенный на основе полученного файла. Сначала файл делится на списки, резделитель
     # отступ между строками, затем списки делятся на строки, разделитель - новая строка
@@ -15,17 +13,11 @@ def test_creator(directory):
 def file_reader(directory):
     # Вовзращает список списков, построенный на основе полученного файла. Сначала файл делится на списки, резделитель
     # отступ между строками, затем списки делятся на строки, разделитель - новая строка
-    try:
-        with open(directory, encoding='UTF-8') as f:
-            content = f.read()
-            f.close()
-            return content
-    except:
-        try:
-            content = docx.Document(directory)
-            return content
-        except:
-            pass
+    with open(directory, encoding='UTF-8') as f:
+        content = f.read()
+        f.close()
+        return content
+
 
 
 
